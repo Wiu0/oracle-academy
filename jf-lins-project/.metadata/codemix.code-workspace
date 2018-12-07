@@ -1,0 +1,12 @@
+{
+  "folders": [
+    {
+      "path": ".plugins\\com.genuitec.eclipse.code.core\\com.genuitec.eclipse.code.core.tmp-project"
+    }
+  ],
+  "settings": {
+    "javascript.referencesCodeLens.enabled": true,
+    "typescript.implementationsCodeLens.enabled": true,
+    "typescript.referencesCodeLens.enabled": true
+  }
+}

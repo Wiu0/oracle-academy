@@ -1,0 +1,28 @@
+package br.com.oracle.lesson2;
+
+import java.util.Scanner;
+
+/**
+ * Classe Driver. Responsabilidade da classe é invocar a classe de objeto "Soma"
+ * – Instâncias de objetos de uma classe de objeto
+ * – Variáveis
+ * – Loops, instruções condicionais (if-else)
+ * – Outra lógica de programação
+ * – Também pode conter outros métodos estáticos
+ *@author wiu
+ *@since 20181206
+ * */
+public class SomaTeste {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Entre com o numero 1 e depois numero 2. Dar \"Enter\" para passar o numero 2");
+		mostrarCalculo(sc.nextDouble(), sc.nextDouble());
+		sc.close();
+	}
+
+	private static void mostrarCalculo(double n1, double n2) {
+		Soma s = new Soma();
+		System.out.println(s.calcular(n1, n2));
+	}
+}

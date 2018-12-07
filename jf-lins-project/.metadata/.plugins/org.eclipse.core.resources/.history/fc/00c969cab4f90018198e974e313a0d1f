@@ -1,0 +1,10 @@
+package br.com.oracle.lesson2.gas;
+
+/**
+ * 
+ * @author wiu
+ *
+ */
+public class ToString {
+
+}

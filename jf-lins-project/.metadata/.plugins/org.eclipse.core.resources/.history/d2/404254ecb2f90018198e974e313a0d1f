@@ -1,0 +1,22 @@
+package br.com.oracle.lesson2.construtor;
+
+/**
+ * Construtor de um objeto é utilizado para que a JVM gere na memoria do computador uma instancia do objeto que será manipulado.
+ * Por padrão, toda classe chama tem um construtor padrao e o dev nao é obrigado a cria-la
+ * @author wiu
+ */
+public class ConstrutorSimples {
+
+	public ConstrutorSimples() {
+		System.out.println("Aqui o Java está instanciando esse objeto na memoria");
+	}
+	
+	/*
+	 * Validando se será impresso o texto: "Aqui o Java está instanciando esse objeto na memoria" que está no construtor do obejto
+	 */
+	public static void main(String[] args) {
+		new ConstrutorSimples();
+	}
+	
+	
+}

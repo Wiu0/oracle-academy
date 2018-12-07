@@ -1,0 +1,8 @@
+package br.com.oracle.lesson2;
+
+public class Soma {
+
+	public double calcular(double n1, double n2) {
+		
+	}
+}

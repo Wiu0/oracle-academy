@@ -1,0 +1,14 @@
+package br.com.oracle.lesson2.api;
+
+/**
+ * Utilizando a classe Math para mostrar API de auxilio.
+ * Utilizando a classe File para mostrar API que necessita de import. Classes que se localização em outro pacote devem ser importadas
+ * @author wiu
+ *
+ */
+public class APIExemplo {
+
+	public static void main(String[] args) {
+		System.out.println(Math.PI);
+	}
+}
