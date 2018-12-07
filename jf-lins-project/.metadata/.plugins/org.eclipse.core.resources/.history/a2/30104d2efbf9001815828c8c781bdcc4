@@ -1,0 +1,13 @@
+package br.com.oracle.lesson3.tipo.variavel.primitiva;
+
+/**
+ * Classe para demonstrar os tipos de variaveis que o Java possui e seus limites
+ * @author wiu
+ * @since 20181207
+ */
+public class ValoresMaxMin {
+
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,11 @@
+package br.com.oracle.lesson3.tipo.variavel.casting;
+
+public class Casting {
+
+	public static void main(String[] args) {
+		
+		//byte valorByte = 324;
+		byte aByte = (byte)324;
+		System.out.println(valorByte);
+	}
+}

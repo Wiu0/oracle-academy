@@ -1,0 +1,23 @@
+package br.com.oracle.lesson3.escopo;
+
+/**
+ * Escopo dentro do metodo é determinado  pela abertura e fechamento de chaves
+ * @author wiu
+ */
+public class EscopoVariavel {
+
+	public static void main(String[] args) {
+		//Variavel valor deve ser unica dentro desse metodo
+		int valor = 0;
+		
+		//for gera erro pois variavel valor já está declarada
+		//for(int valor = 1; valor < 10; valor++); 
+		
+		{
+			//Aqui dá erro tambem, pois esse escopo está dentro do metodo main
+			int valor = 1;
+		}
+		
+		
+	}
+}

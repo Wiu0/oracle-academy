@@ -5,5 +5,5 @@ block-h4=font-weight\: bold; color\: \#1081af;
 block-h5=font-size\: 90%; font-weight\: bold; color\: \#1081af;
 block-h6=font-size\: 80%; font-weight\: bold; color\: \#1081af;
 eclipse.preferences.version=1
-overriddenByCSS=,phrase-code,block-h1,block-h2,block-h3,block-h4,block-h5,block-h6,
+overriddenByCSS=,block-h1,block-h2,block-h3,block-h4,block-h5,block-h6,phrase-code,
 phrase-code=font-family\: monospace; color\: \#6d72f6;
