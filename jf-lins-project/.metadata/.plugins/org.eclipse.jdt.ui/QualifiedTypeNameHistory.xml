@@ -2,6 +2,14 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="br.com.oracle.lesson2.Soma"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
-<fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="br.com.oracle.lesson2.construtor.ConstrutorSimples"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="br.com.oracle.lesson3.escopo.EscopoLocalGlobal"/>
+<fullyQualifiedTypeName name="javax.tools.JavaCompiler"/>
+<fullyQualifiedTypeName name="javax.tools.ToolProvider"/>
+<fullyQualifiedTypeName name="javax.tools.StandardJavaFileManager"/>
+<fullyQualifiedTypeName name="com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="javax.tools.StandardLocation"/>
+<fullyQualifiedTypeName name="java.io.File"/>
 </qualifiedTypeNameHistroy>

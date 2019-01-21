@@ -9,26 +9,14 @@
 		<item value="937" key="dialogWidth"/>
 		<list key="textEntries">
 			<item value="1"/>
-			<item value="1"/>
-			<item value="1"/>
-			<item value="1"/>
 		</list>
 		<list key="orderedElements">
-			<item value="org.eclipse.jdt.ui.edit.text.java.create.getter.setter"/>
-			<item value="org.eclipse.ui.window.customizePerspective"/>
-			<item value="org.eclipse.ui.editors.revisions.author.toggle"/>
 			<item value="preferences"/>
 		</list>
 		<list key="orderedProviders">
-			<item value="org.eclipse.ui.commands"/>
-			<item value="org.eclipse.ui.commands"/>
-			<item value="org.eclipse.ui.commands"/>
 			<item value="org.eclipse.ui.actions"/>
 		</list>
 		<list key="textArray">
-			<item value="ggas"/>
-			<item value="custo"/>
-			<item value="auth"/>
 			<item value="prefere"/>
 		</list>
 	</section>

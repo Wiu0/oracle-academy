@@ -1,0 +1,20 @@
+package br.com.oracle.lesson1;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Collections;
+
+import javax.tools.JavaCompiler;
+import javax.tools.StandardJavaFileManager;
+import javax.tools.StandardLocation;
+import javax.tools.ToolProvider;
+
+public class HelloWorld {
+
+	public static void main(String[] args) throws IOException {
+		JavaCompiler c = ToolProvider.getSystemJavaCompiler();
+		StandardJavaFileManager fm = c.getStandardFileManager(null, null, null);
+		Iterable<? extends File> path = Collections.singletonList(new File("metaspace/"));
+		fm.setLocation(StandardLocation.CLASS_OUTPUT, path);
+	}
+}

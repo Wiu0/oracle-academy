@@ -1,8 +1,0 @@
-package br.com.oracle.lesson3.escopo;
-
-public class EscopoLocalGlobal {
-
-	//Essa variavel é chamada de variavel de escopo global, pois a mesma pertence ao objeto EscopoLocalGlobal
-	int valor1;
-	
-}

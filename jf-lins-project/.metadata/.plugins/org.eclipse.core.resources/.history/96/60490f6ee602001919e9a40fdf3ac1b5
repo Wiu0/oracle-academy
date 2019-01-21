@@ -1,0 +1,16 @@
+package br.com.oracle.lesson1;
+
+import java.io.File;
+
+import javax.tools.JavaCompiler;
+import javax.tools.StandardJavaFileManager;
+import javax.tools.ToolProvider;
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		JavaCompiler c = ToolProvider.getSystemJavaCompiler();
+		StandardJavaFileManager fm = c.getStandardFileManager(null, null, null);
+		Iterable<? extends File> path = java.util.Collections.
+	}
+}

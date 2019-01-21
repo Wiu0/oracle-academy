@@ -1,8 +1,0 @@
-package br.com.oracle.lesson2.api;
-
-public class APIExemplo {
-
-	public static void main(String[] args) {
-		System.out.println(Math.PI);
-	}
-}
