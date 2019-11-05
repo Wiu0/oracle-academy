@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Sapo
+comment0.text=\r\n\ Classe\ Sapo\ feita\ para\ estudo\r\n\ \r\n\ @author\ wiu\r\n\ @version\ 1.0\r\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ controleTeclado()
+comment3.params=
+comment3.target=void\ tocandoMosca()
+comment4.params=
+comment4.target=void\ adicionarCobra()
+comment5.params=
+comment5.target=void\ soltarPoder()
+numComments=6
