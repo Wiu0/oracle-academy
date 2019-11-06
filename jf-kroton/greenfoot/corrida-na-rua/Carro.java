@@ -21,8 +21,9 @@ public class Carro extends Actor
             setLocation(0, numero);
         }
         if(isTouching(Pedestre.class)){
-            getWorld().showText("VOCE PERDEU", getWorld().getWidth()/2
-            , getWorld().getHeight()/2);
+            getWorld().addObject(new GameOver(), getWorld().getWidth()/2,
+            getWorld().getHeight()/2);
+            //arquivo game-over.mp3 na pasta "sound" do jogo
             Greenfoot.playSound("game-over.mp3");
             Greenfoot.stop();
         }

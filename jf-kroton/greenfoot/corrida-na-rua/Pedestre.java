@@ -3,12 +3,20 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Pedestre extends Actor {
     int ponto = 0;
     boolean fazPontoNaParteCima = true;
-
+    Pontos p = new Pontos();
+    
     public void act() {
-        getWorld().showText("Pontos " + ponto, 750, 430);
+        mostrarPontos();
         mover();
         somarPonto();
     }    
+
+    void mostrarPontos(){
+        GreenfootImage gi = new GreenfootImage(
+        "Pontos: " + ponto, 30, Color.WHITE, new Color(0, 0, 0, 0));
+        p.setImage(gi);
+        getWorld().addObject(p, 740, 430);
+    }
 
     void somarPonto(){
         if(fazPontoNaParteCima){
@@ -17,7 +25,7 @@ public class Pedestre extends Actor {
                 fazPontoNaParteCima = false;
             }
         }else{
-             if(getY() > 408){
+            if(getY() > 408){
                 ponto++;
                 fazPontoNaParteCima = true;
             }

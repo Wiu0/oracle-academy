@@ -21,6 +21,9 @@ public class MyWorld extends World
         addObject(new Pedestre(), 400, 420);
         addObject(new Carro(), 0, 225);
         addObject(new Carro(), 0, 100);
+        GreenfootSound gs = new GreenfootSound("playing.mp3");
+        gs.playLoop();
+        //Greenfoot.playSound("playing.mp3");
         
     }
 }
