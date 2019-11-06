@@ -24,6 +24,7 @@ public class Carro extends Actor
             getWorld().addObject(new GameOver(), getWorld().getWidth()/2,
             getWorld().getHeight()/2);
             //arquivo game-over.mp3 na pasta "sound" do jogo
+            MyWorld.gs.stop();
             Greenfoot.playSound("game-over.mp3");
             Greenfoot.stop();
         }
