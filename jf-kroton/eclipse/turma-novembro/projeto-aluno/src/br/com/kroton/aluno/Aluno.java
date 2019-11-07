@@ -6,8 +6,6 @@ public class Aluno {
 	private String endereco;
 	private short idade;
 	private double altura;
-	
-	
      	
 	public Aluno(String nome, String endereco, short idade, double altura) {
 		super();
