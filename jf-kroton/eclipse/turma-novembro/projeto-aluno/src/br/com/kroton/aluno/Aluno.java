@@ -26,8 +26,11 @@ public class Aluno extends Usuario implements RegraAcessoSala, Closeable{
 		return 1;
 	}
 	
+	public Aluno(String nome) {
+		this(nome, "", (short)0, 0);
+	}
+	
 	public Aluno(String nome, String endereco, short idade, double altura) {
-		super();
 		setNome(nome);
 		this.endereco = endereco;
 		this.idade = idade;

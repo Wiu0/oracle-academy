@@ -19,5 +19,4 @@ public class Professor extends Funcionario implements RegraAcessoSala{
 	public void comparacer() {
 		System.out.println("Entrar na sala e dar aula");
 	}
-
 }
