@@ -7,7 +7,9 @@ public class TipoNumericoInteiro {
 		short varShort = 12;
 		int varInt = 12;
 		long varLong = 12;
-		//atalho sysout + ctrl + space ou sout + ctrl + space 
+		long numeroMuitoGrande = 1_233_456_789_789l;
+		int valorBinario = 0b101;
+		//atalho sysout + ctrl + space ou sout + ctrl + space
 		System.out.print(varByte);//Imprimi e deixar cursor na linha
 		System.out.print(varShort);//Imprimi e deixar cursor na linha
 		System.err.println(varInt);//Imprimi e joga cursor na prox linha. err indica saida de erro
@@ -17,6 +19,8 @@ public class TipoNumericoInteiro {
 		System.out.println(varShort);
 		System.out.println(varInt);
 		System.out.println(varLong);
+		System.out.println(numeroMuitoGrande);
+		System.out.println(valorBinario);
 	}
 	
 }
