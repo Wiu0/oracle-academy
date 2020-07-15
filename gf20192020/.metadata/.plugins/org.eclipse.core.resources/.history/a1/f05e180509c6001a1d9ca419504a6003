@@ -1,0 +1,136 @@
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
+
+import br.com.maxicode.core.Conexao;
+import br.com.maxicode.db.IRecordSet;
+import br.com.maxicode.util.Funcoes;
+import br.com.visualmix.generico.conexao.Application;
+
+public class NoPrideButItWorks {
+
+	private static final long TIME_WAIT;
+	public static Map<String, String> tokenNo;
+	static Conexao con;
+	static Sender s = new Sender();
+	static boolean keep = true;
+	static ServerSocket ss;
+	
+	static {
+		Application.ArquivoConf = "vm-presale.conf";
+		Application.initialize();
+		con = Application.getInstance().getConexaoPrincipal();
+		tokenNo = new HashMap<String, String>();
+		TIME_WAIT = Long.parseLong(Funcoes.getParametro("GERAL.TIMEOUT", "30000"));
+
+	}
+
+	static Conexao conPush = new Conexao();
+
+	public static void main(String[] args)
+			throws ClassNotFoundException, SQLException, InterruptedException, NumberFormatException, IOException {
+
+		thread();
+
+		conPush.setTipoConexao(con.getTipoConexao());
+		conPush.setBanco("vm_push");
+		conPush.setServidor(con.getServidor());
+		conPush.setLogin(con.getLogin());
+		conPush.setSenha(con.getSenha());
+		conPush.setPorta(con.getPorta());
+		conPush.openConexao();
+
+		IRecordSet rst = conPush.getRecordSet("SELECT * FROM USER_GROUP");
+
+		while (rst.next()) {
+			tokenNo.put(rst.getString("key"), rst.getString("token_fcm"));
+		}
+		rst.close();
+
+		while (keep) {
+			System.out.println("doing AVAILABLE_PICK");
+			doAlterStatus("AVAILABLE_PICK", "DELIVERING");
+			System.out.println("doing DELIVERING");
+			doAlterStatus("DELIVERING", "FINISHED");
+
+		}
+		extracted();
+	}
+
+	private static void thread() {
+		new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				try {
+					ServerSocket ss = new ServerSocket(Integer.parseInt(Funcoes.getParametro("GERAL.PORTA", "7172")));
+					while (true) {
+						Socket accept = ss.accept();
+						InputStream is = accept.getInputStream();
+						byte[] buffer = new byte[1024];
+						int read;
+						System.out.println("Monitorando se stop");
+						while ((read = is.read(buffer)) != -1) {
+							String output = new String(buffer, 0, read);
+							System.out.print(output);
+							System.out.flush();
+							if(output.contains("shutdown")) {
+								System.out.println("Finalizando app");
+								keep = false;
+								return;
+							}
+							
+						}
+						is.close();
+					}
+					
+
+				} catch (NumberFormatException | IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+			}
+		}).start();
+	}
+
+	private static void doAlterStatus(String sql, String st) throws InterruptedException {
+		String where = " WHERE STATUS = " + con.toString(sql);
+		IRecordSet rst = con
+				.getRecordSet("SELECT ID_COMPANY_FK, ID_IDENTIFIER_FK, ID_SHOPPING_CART FROM SHOPPING_CART" + where);
+		while (rst.next()) {
+			s.send(rst.getInt("ID_COMPANY_FK"), rst.getLong("ID_SHOPPING_CART"), rst.getInt("ID_IDENTIFIER_FK"), st);
+		}
+		rst.close();
+		con.executeSQL("UPDATE SHOPPING_CART set STATUS = " + con.toString(st) + where);
+		Thread.sleep(TIME_WAIT);
+	}
+
+	@Override
+	protected void finalize() throws Throwable {
+		extracted();
+	}
+
+	private static void extracted() {
+		try {
+			Application.getInstance().close();
+		} catch (Exception e) {
+
+		}
+		try {
+			Application.getInstance().closeConexao(conPush);
+		} catch (Exception e) {
+		}
+		try {
+			ss.close();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+}

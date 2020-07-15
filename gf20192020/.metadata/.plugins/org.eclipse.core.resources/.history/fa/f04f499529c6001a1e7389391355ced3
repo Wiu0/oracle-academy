@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class DesafioMediaPonderadoOuAritmetica {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Digite: ");
+		System.out.println("1 - média aritmética");
+		System.out.println("2 - Média ponderada");
+		
+		
+		
+		sc.close();
+	}
+}

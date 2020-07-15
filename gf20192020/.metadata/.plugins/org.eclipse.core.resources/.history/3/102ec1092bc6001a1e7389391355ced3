@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class DesafioMediaPonderadoOuAritmetica {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("\t\\Digite: \n\"1\" - Média aritmética \n\"2\" - Média ponderada");
+		byte opcao = sc.nextByte();
+		
+		if(opcao == 1) {
+			//calculo aritmetico
+		}else {
+			if(opcao == 2) {
+				//calculo ponderado
+			}else {
+				System.out.println("Opcao invalida");
+			}
+		}
+		sc.close();
+	}
+}

@@ -1,0 +1,82 @@
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
+
+import br.com.maxicode.core.Conexao;
+import br.com.maxicode.db.IRecordSet;
+import br.com.visualmix.generico.conexao.Application;
+
+public class NoPrideButItWorks {
+
+	public static Map<String, String> tokenNo;
+	static Conexao con;
+	static Sender s = new Sender();
+	
+	static {
+		Application.ArquivoConf = "vm-presale.conf";
+		Application.initialize();
+		con = Application.getInstance().getConexaoPrincipal();
+		tokenNo = new HashMap<String, String>();
+	}
+		
+	static Conexao conPush = new Conexao();
+	
+	public static void main(String[] args) throws ClassNotFoundException, SQLException, InterruptedException {
+		
+		
+		conPush.setTipoConexao(con.getTipoConexao());
+		conPush.setBanco("vm_push");
+		conPush.setServidor(con.getServidor());
+		conPush.setUsuario(con.getUsuario());
+		conPush.setSenha(con.getSenha());
+		conPush.openConexao();
+		
+		IRecordSet rst = conPush.getRecordSet("SELECT * FROM USER_GROUP");
+		
+		while(rst.next()) {
+			tokenNo.put(rst.getString("key"), rst.getString("toke_fcm"));
+		}
+		rst.close();
+		
+		while(true) {
+			doAlterStatus("SELECT COMPANY_ID, ID_IDENTIFIER_FK, ID_SHOPPING_CART FROM SHOPPING_CART"
+					+ " WHERE STATUS = 'AVAILABLE_PICK'",
+					s,
+					"UPDATE SHOPPING_CART set STATUS = 'DELIVERING' where STATUS = 'AVAILABLE_PICK'",
+					10000);
+			
+			
+			doAlterStatus("SELECT COMPANY_ID, ID_IDENTIFIER_FK, ID_SHOPPING_CART FROM SHOPPING_CART"
+					+ " WHERE STATUS = 'DELIVERING'",
+					s,
+					"UPDATE SHOPPING_CART set STATUS = 'FINISHED' where STATUS = 'DELIVERING'",
+					20000);
+			
+		}
+	}
+	
+	private static void doAlterStatus(String sql, Sender s, String update, long timeWait) throws InterruptedException {
+		IRecordSet rst = con.getRecordSet(sql);
+		while(rst.next()) {
+			s.send(rst.getInt("company_id"), rst.getInt("ID_IDENTIFIER_FK") + ":CUSTOMER"));
+		}
+		
+		rst.close();
+		con.executeSQL(update);
+		Thread.sleep(timeWait);
+	}
+
+	@Override
+	protected void finalize() throws Throwable {
+		try {
+			Application.getInstance().close();
+		}catch (Exception e) {
+		
+		}
+		try {
+			Application.getInstance().closeConexao(conPush);
+		}catch (Exception e) {
+		}
+	}
+
+}

@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class MediaAlunoMetodo {
+
+	public static void main(String[] args) {
+		//Nota deve ser maior/igual 0 e menor/igual 10
+		String nome = "Wiu";
+		Scanner sc = new Scanner(System.in);
+		double nota1 = sc.nextDouble(), nota2 = sc.nextDouble(), nota3 = sc.nextDouble(), nota4 = sc.nextDouble();
+		double media = (nota1 + nota2 + nota3 + nota4)/4;
+		
+		System.out.println(nome + " tem média de " + media);
+		sc.close();
+		
+		
+	}
+}

@@ -1,0 +1,38 @@
+import org.json.JSONObject;
+
+import br.com.maxicode.util.Funcoes;
+
+public class Sender {
+
+	
+	public void send() {
+		// Declaration of Message Parameters
+	    String message_url = new String(Funcoes.getParametro("FCM.URL"));
+	    String message_sender_id = new String(Funcoes.getParametro("FCM.PROJECTID"));
+	    String message_key = new String("key=" + Funcoes.getParametro("FCM.URL"));
+
+	    // Generating a JSONObject for the content of the message
+	    JSONObject message = new JSONObject();
+	    message.put("message", "TEXT");
+	    JSONObject protocol = new JSONObject();
+	    protocol.put("to", message_sender_id);
+	    protocol.put("data", message);
+
+	    // Send Protocol
+	    try {
+	        HttpClient httpClient = HttpClientBuilder.create().build();
+
+	        HttpPost request = new HttpPost(message_url);
+	        request.addHeader("content-type", "application/json");
+	        request.addHeader("Authorization", message_key);
+
+	        StringEntity params = new StringEntity(protocol.toString());
+	        request.setEntity(params);
+	        System.out.println(params);
+
+	        HttpResponse response = httpClient.execute(request);
+	        System.out.println(response.toString());
+	    } catch (Exception e) {
+	    }
+	}
+}
