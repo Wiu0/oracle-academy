@@ -1,0 +1,15 @@
+package br.com.oracle.gf.desafio;
+
+public class DesafioN2 {
+
+	public static void main(String[] args) {
+		//Pedir pro usuario informar um genero de filme/musica
+		//Informar para o usuario como funciona a forma de classificacao ex:
+		//1 a 5, 1 - 10, 1 - 100, etc
+		//Pedir a quantidade de filmes que a pessoa quer avaliar
+		//Pedir o nome de cada filmes e a nota/avaliacao para o usuario
+		// apresentar a media aritmetica dos filmes e os nomes dos filmes. Ex:
+		//Os filmes: AAAAA, BBBBB e CCCCC tem uma media de x
+		
+	}
+}

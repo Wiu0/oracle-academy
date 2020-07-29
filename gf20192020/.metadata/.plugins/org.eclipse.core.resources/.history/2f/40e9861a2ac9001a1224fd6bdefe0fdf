@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class MaiorMenor {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int menor = 0, maior = 0;
+		int n =0;
+		for(int i = 0; i < 10; i++) {
+			n = sc.nextInt();
+			if(n > maior) {
+				maior = n;
+			}
+			if(n < menor) {
+				menor = n;
+			}
+		}
+		sc.close();
+	}
+}

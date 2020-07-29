@@ -1,0 +1,13 @@
+
+public class AlunoTeste {
+
+	public static void main(String[] args) {
+		Aluno al = new Aluno();
+		al.nome = "Wiu";
+		al.nota1 = 5;
+		al.nota2 = 10;
+		al.nota3 = 9;
+		al.calcularMedia();
+		
+	}
+}

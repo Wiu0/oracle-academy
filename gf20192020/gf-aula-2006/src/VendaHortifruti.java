@@ -2,21 +2,30 @@ import java.util.Scanner;
 
 public class VendaHortifruti {
 
+	static void venderProduto(Scanner entrada, String nomeProduto, 
+			double valorUn) {
+		int qtdDispVender = 10;
+		System.out.println("Voce deseja quantas " + nomeProduto + "?");
+		int quantidadeCompra = entrada.nextInt();
+		
+		if(quantidadeCompra > qtdDispVender) {
+			System.out.println("Sinto muito, mas nós só temos " + qtdDispVender);
+		}else {
+			qtdDispVender -= quantidadeCompra;
+			System.out.println("O valor é " + quantidadeCompra * valorUn);
+		}
+	}
 	
 	public static void main(String[] args) {
-		int qtdMacaDispVender = 10;
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Bom dia, bem vindx a venda Horti Family");
-		System.out.println("Voce deseja quantas maçãs?");
-		int quantidadeMacasCompra = sc.nextInt();
 		
-		if(quantidadeMacasCompra > qtdMacaDispVender) {
-			System.out.println("Sinto muito, mas nós só temos " + qtdMacaDispVender);
-		}else {
-			qtdMacaDispVender -= quantidadeMacasCompra;
-			System.out.println("O valor é " + quantidadeMacasCompra * 0.5);
-			System.out.println("Obrigado pela compra!");
-		}
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Olá!!! Desejamos uma ótima compra na Horti Family");
+		venderProduto(sc, "Maca", 0.5);
+		venderProduto(sc, "Laranja", 0.8);
+		venderProduto(sc, "Uva", 1.5);
+		
+		
+		
 		sc.close();
 	}
 }
