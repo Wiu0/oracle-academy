@@ -1,8 +1,0 @@
-
-public class AlunoTeste {
-
-	public static void main(String[] args) {
-		Aluno alunoEscola1 = new Aluno();
-		System.out.println();
-	}
-}

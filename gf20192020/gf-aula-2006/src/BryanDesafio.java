@@ -66,7 +66,7 @@ public class BryanDesafio {
 				System.out.println("Qual nota do Quarto Bimestre");
 				double nota8 = sc.nextDouble();
 
-				double resultado2 = (nota5 + nota6 + nota6 + nota8) / 4;
+				double resultado2 = (nota5 + nota6 + nota7 + nota8) / 4;
 				System.out.println("Nome do aluno " + name2);
 				System.out.println("Media do aluno È " + resultado2);
 

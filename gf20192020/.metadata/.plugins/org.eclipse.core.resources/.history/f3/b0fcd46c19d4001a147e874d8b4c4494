@@ -1,0 +1,18 @@
+
+public class Aluno {
+
+	String nome;
+	private double nota1;
+	private double nota2;
+	private double nota3;
+	
+	
+	public double getNota1() {
+		return nota1;
+	}
+	
+	void calcularMedia() {
+		double media = (nota1 + nota2 + nota3)/3;
+		System.out.println(media);
+	}
+}

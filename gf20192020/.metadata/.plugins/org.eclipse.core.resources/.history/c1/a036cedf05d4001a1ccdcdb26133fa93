@@ -1,0 +1,14 @@
+
+public class Aluno {
+
+	long numeroCarterinha;
+	String nome;
+	private double nota1;
+	private double nota2;
+	private double nota3;
+	
+	void calcularMedia() {
+		double media = (nota1 + nota2 + nota3)/3;
+		System.out.println(media);
+	}
+}

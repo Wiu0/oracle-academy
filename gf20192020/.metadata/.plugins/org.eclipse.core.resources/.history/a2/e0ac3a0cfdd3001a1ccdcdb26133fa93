@@ -1,0 +1,13 @@
+
+public class SalaTeste {
+
+	
+	public static void main(String[] args) {
+		Sala s = new Sala();
+		s.numero = 1;
+		s.numeroCarteiras = 3;
+		s.aluno = "Wiu";
+		
+		System.out.println("Aluno: " + s.aluno);
+	}
+}

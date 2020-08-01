@@ -1,0 +1,19 @@
+
+public class SalaTeste {
+
+	
+	public static void main(String[] args) {
+		Aluno al1 = new Aluno();
+		al1.nome = "Wiu";
+		al1.nota1 = 5;
+		al1.nota2 = 7;
+		al1.nota3 = 10;
+		
+		Sala s = new Sala();
+		s.numero = 1;
+		s.numeroCarteiras = 3;
+		s.al = al1;
+		
+		System.out.println("Na sala " + s.numero + " temos os alunos: " + s.aluno);
+	}
+}

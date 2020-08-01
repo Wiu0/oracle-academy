@@ -1,0 +1,28 @@
+
+public class Aluno {
+
+	private long numeroCarterinha;
+	private String nome;
+	private double nota1;
+	private double nota2;
+	private double nota3;
+	private String local;
+	
+	void calcularMedia() {
+		double media = (nota1 + nota2 + nota3)/3;
+		System.out.println(media);
+	}
+	
+	
+	public void setLocal(String local) {
+		
+	}
+	
+	public String getLocal() {
+		return local;
+	}
+	
+	public double getNota1() {
+		return nota1;
+	}
+}

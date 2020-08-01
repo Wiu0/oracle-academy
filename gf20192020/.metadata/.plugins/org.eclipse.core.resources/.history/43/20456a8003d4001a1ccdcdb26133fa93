@@ -1,0 +1,16 @@
+
+public class Sala {
+
+	int numero;
+	int numeroCarteiras;
+	Aluno al;
+	
+	
+	
+	int pegarQuantidadeAlunos() {
+		return 1;
+	}
+	
+	
+	
+}

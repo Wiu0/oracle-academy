@@ -1,0 +1,10 @@
+public class SalaAula {
+
+	int numeroSala;
+	int quantidadeMaxAluno;
+	Aluno abc;	
+	
+	
+	
+	
+}

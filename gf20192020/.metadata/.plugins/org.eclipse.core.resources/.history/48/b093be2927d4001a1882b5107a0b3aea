@@ -1,0 +1,11 @@
+public class SalaAula {
+
+	int numeroSala;
+	int quantidadeMaxAluno;
+	Aluno abc;	
+	
+	public int quantidadeMaxAlunoNoturno() {
+		return (int)(quantidadeMaxAluno * .8);
+	}
+	
+}
