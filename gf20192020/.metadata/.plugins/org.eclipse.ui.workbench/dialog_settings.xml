@@ -3,8 +3,32 @@
 	<section name="NewWizardAction">
 		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ui.Basic"/>
+			<item value="org.eclipse.datatools.connectivity"/>
+			<item value="org.eclipse.emf.codegen.ecore.ui.wizardCategory"/>
+			<item value="org.eclipse.emf.codegen.ecore.ui.wizardCategory/org.eclipse.emf.codegen.ecore.ui.mappingWizardCategory"/>
+			<item value="org.eclipse.jst.ejb.ui"/>
+			<item value="org.eclipse.egit.ui.wizardCategory"/>
+			<item value="org.eclipse.buildship.ui.creationwizards"/>
 			<item value="org.eclipse.jdt.ui.java"/>
+			<item value="org.eclipse.jdt.ui.java/org.eclipse.jdt.debug.ui.java"/>
+			<item value="org.eclipse.jdt.ui.java/org.eclipse.jdt.junit"/>
+			<item value="org.eclipse.jst.j2ee.internal"/>
+			<item value="org.eclipse.emf.codegen.ui.JETNewWizards"/>
+			<item value="org.eclipse.wst.jsdt.ui.java"/>
 			<item value="org.eclipse.jpt.jaxb"/>
+			<item value="org.eclipse.jpt.jaxb/org.eclipse.jpt.jaxb.eclipselink"/>
+			<item value="org.eclipse.jpt.jpa"/>
+			<item value="org.eclipse.jpt.jpa/org.eclipse.jpt.jpa.eclipselink"/>
+			<item value="org.eclipse.m2e"/>
+			<item value="org.eclipse.oomph"/>
+			<item value="org.eclipse.pde.PDE"/>
+			<item value="org.eclipse.rse.ui.newWizards.rseCategory"/>
+			<item value="org.eclipse.datatools.sql"/>
+			<item value="org.eclipse.mylyn.ui.wizards.new"/>
+			<item value="org.eclipse.pde.userAssistance"/>
+			<item value="org.eclipse.wst.web.ui"/>
+			<item value="org.eclipse.jst.ws.ui.new"/>
 		</list>
 	</section>
 	<section name="ImportExportAction">

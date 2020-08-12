@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class ListaAluno {
+
+	//Array
+	public static void main(String[] args) {
+		
+		String nomeAluno = "";
+		String nomeAlunos[] = new String[2];
+		nomeAlunos[0] = "William";
+		nomeAlunos[1] = "Ana";
+		
+		System.out.println(nomeAlunos);
+		
+	}
+}

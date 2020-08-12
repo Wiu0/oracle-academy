@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class ListaAluno {
+
+	
+	public static void main(String[] args) {
+		String nomeAluno0 = "William";
+		String nomeAluno1 = "Ana";
+		String nomeAluno2 = "Pedro";
+	
+		
+		
+		System.out.println(nomeAluno0);
+		System.out.println(nomeAluno1);
+		System.out.println(nomeAluno2);
+		
+		
+		
+		
+	}
+}

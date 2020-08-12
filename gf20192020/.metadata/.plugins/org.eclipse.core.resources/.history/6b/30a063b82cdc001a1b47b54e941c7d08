@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class ListaAluno {
+
+	//Array
+	public static void main(String[] args) {
+		
+		String nomeAluno;
+		String nomeAlunos[] = new String[2];
+		
+		System.out.println(nomeAlunos);
+		
+	}
+}
