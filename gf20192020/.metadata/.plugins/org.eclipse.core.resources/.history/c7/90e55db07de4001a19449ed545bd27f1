@@ -1,0 +1,13 @@
+package br.com.oracle.gf.desafio.heranca.constructor.sobrescrita.sobrecarga;
+
+public class Felino {
+
+	//criar get e set do atributo peso
+	private double peso;
+	
+	
+	public void emitirSom() {
+		System.out.println("mmmmm");
+	}
+	
+}

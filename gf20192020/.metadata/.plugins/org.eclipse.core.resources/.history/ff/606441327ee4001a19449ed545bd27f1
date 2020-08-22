@@ -1,0 +1,9 @@
+package br.com.oracle.gf.desafio.heranca.constructor.sobrescrita.sobrecarga;
+
+public class FelinoTeste {
+
+	public static void main(String[] args) {
+		Felino f = new Felino();
+		f.emitirSom();
+	}
+}

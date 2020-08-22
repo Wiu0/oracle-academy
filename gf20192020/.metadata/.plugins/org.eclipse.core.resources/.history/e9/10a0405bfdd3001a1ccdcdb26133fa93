@@ -1,8 +1,0 @@
-
-public class Sala {
-
-	int numero;
-	int numeroCarteiras;
-	String aluno;
-	
-}

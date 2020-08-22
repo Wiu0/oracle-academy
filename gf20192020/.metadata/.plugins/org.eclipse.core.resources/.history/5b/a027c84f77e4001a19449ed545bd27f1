@@ -1,0 +1,8 @@
+package br.com.oracle.gf.desafio.constructor;
+
+public class Felino {
+
+	private double peso;
+	
+	
+}

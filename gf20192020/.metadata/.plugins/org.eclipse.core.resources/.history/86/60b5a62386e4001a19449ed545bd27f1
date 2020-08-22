@@ -1,0 +1,14 @@
+package br.com.oracle.gf.desafio.heranca.constructor.sobrescrita.sobrecarga;
+
+public class Leao extends Felino {
+
+	public Leao(String som) {
+		super(som);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void emitirSom() {
+		System.out.println("Leao faz " + som);
+	}
+}

@@ -1,0 +1,7 @@
+package br.com.oracle.gf.desafio.heranca.constructor.sobrescrita.sobrecarga;
+
+public class Tigre extends Felino{
+
+	private double peso;
+
+}

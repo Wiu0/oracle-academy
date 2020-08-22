@@ -1,0 +1,22 @@
+package br.com.oracle.gf.desafio.heranca.constructor.sobrescrita.sobrecarga;
+
+public class FelinoTeste2 {
+
+	public static void main(String[] args) {
+		Felino f = new Felino();
+		f.setPeso(1);
+		f.emitirSom();
+		
+		Leao l = new Leao();
+		f.setPeso(12);
+		l.emitirSom();
+		
+		Tigre t = new Tigre();
+		f.setPeso(80);
+		t.emitirSom();
+		
+		Gato g = new Gato();
+		f.setPeso(2);
+		g.emitirSom();
+	}
+}
