@@ -13,7 +13,7 @@ public class FelinoTeste {
 		
 		t.emitirSom();
 		
-		Gato g = new Gato();
+		Gato g = new Gato("Miau");
 		g.emitirSom();
 	}
 }
