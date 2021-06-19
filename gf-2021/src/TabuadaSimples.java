@@ -4,13 +4,27 @@ public class TabuadaSimples {
 
 	
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		
+		imprimirInicioDoPrograma();
+		imprimirTabuada();
+		imprimirFinalDoPrograma();
+	}
+	
+	
+	static void imprimirFinalDoPrograma() {
+		System.out.println("Até mais");
+	}
+	
+	
+	static void imprimirInicioDoPrograma() {
+		System.out.println("Bem vindo a tabuada fantastica");
 		System.out.println("Informa o numero da tabuada a ser calculada");
-		
+	}
+	
+	
+	static void imprimirTabuada() {
+		Scanner sc = new Scanner(System.in);
 		int numeroTabuada = sc.nextInt();
 		sc.close();
-		
 		System.out.println("0 x " + numeroTabuada + " = " + (0 * numeroTabuada));
 		System.out.println("1 x " + numeroTabuada + " = " + (1 * numeroTabuada));
 		System.out.println("2 x " + numeroTabuada + " = " + (2 * numeroTabuada));
@@ -22,6 +36,7 @@ public class TabuadaSimples {
 		System.out.println("8 x " + numeroTabuada + " = " + (8 * numeroTabuada));
 		System.out.println("9 x " + numeroTabuada + " = " + (9 * numeroTabuada));
 		System.out.println("10 x "+ numeroTabuada + " = " + (10 * numeroTabuada));
-		
 	}
+	
 }
+

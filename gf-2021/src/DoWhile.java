@@ -27,7 +27,7 @@ public class DoWhile {
 				
 			}
 			
-		}while(opcao != 0);
+		} while(opcao != 0);
 	
 		sc.close();
 	}
