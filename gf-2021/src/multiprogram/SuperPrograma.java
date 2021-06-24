@@ -4,14 +4,18 @@ import java.util.Scanner;
 
 public class SuperPrograma {
 	
-	static Scanner sc = new Scanner(System.in);
+	Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		SuperPrograma sp = new SuperPrograma();
 		
-		apresentarMenuDeOpcoes();
+		sp.sc.next();
+		sp.apresentarMenuDeOpcoes();
+		sp.calcularDespesas();
+		sp.calcularMediaNotas();
 	}
 
-	static void apresentarMenuDeOpcoes() {
+	 void apresentarMenuDeOpcoes() {
 
 		System.out.println("Qual opcao vc deseja executar?");
 		System.out.println("1- Despesas da casa");
@@ -43,7 +47,7 @@ public class SuperPrograma {
 		sc.close();
 	}
 
-	static void calcularMediaIdade() {
+	 void calcularMediaIdade() {
 		int idadePai = sc.nextInt(), idadeMae = sc.nextInt(), idadeCrianca = sc.nextInt();
 		int quantidadeIdades = sc.nextInt();
 		int somatoria = idadePai + idadeMae + idadeCrianca;
@@ -51,7 +55,7 @@ public class SuperPrograma {
 		System.out.println("A idade media na casa que vc mora é " + mediaIdadeCasa + " anos");
 	}
 	
-	static void calcularMediaNotas() {
+	 void calcularMediaNotas() {
 		System.out.println("Quantas notas?");
 		int qtdNotas = sc.nextInt();
 		
@@ -74,7 +78,7 @@ public class SuperPrograma {
 
 	}
 	
-	static void calcularDespesas() {
+	void calcularDespesas() {
 		double agua;
 		double luz, transporte;
 		double internet, gas, mercado;

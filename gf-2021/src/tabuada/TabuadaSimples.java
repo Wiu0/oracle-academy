@@ -6,7 +6,10 @@ public class TabuadaSimples {
 	
 	public static void main(String[] args) {
 		imprimirInicioDoPrograma();
-		imprimirTabuada();
+		Scanner sc = new Scanner(System.in);
+		int numeroTabuada = sc.nextInt();
+		sc.close();
+		imprimirTabuada(numeroTabuada);
 		imprimirFinalDoPrograma();
 	}
 	
@@ -22,10 +25,8 @@ public class TabuadaSimples {
 	}
 	
 	
-	static void imprimirTabuada() {
-		Scanner sc = new Scanner(System.in);
-		int numeroTabuada = sc.nextInt();
-		sc.close();
+	static void imprimirTabuada(int numeroTabuada) {
+		
 		System.out.println("0 x " + numeroTabuada + " = " + (0 * numeroTabuada));
 		System.out.println("1 x " + numeroTabuada + " = " + (1 * numeroTabuada));
 		System.out.println("2 x " + numeroTabuada + " = " + (2 * numeroTabuada));
