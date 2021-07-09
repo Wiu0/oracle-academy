@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class TabuadaMediaModeloMetodos {
 	
 	public static void main(String[] args) {
+		
 		mostrarMensagemInicialSistema();
 		int numeroDaTabuada = capturarNumeroDaTabuada();
 		mostrarTabuadaAteDez(numeroDaTabuada);

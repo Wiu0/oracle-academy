@@ -15,7 +15,6 @@ public class DesafioMediaIdade {
 	
 		System.out.println("A idade media na casa que vc mora é " + mediaIdadeCasa + " anos");
 		
-
 	}
 }
 

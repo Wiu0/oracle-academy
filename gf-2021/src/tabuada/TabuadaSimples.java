@@ -5,6 +5,7 @@ public class TabuadaSimples {
 
 	
 	public static void main(String[] args) {
+		
 		imprimirInicioDoPrograma();
 		Scanner sc = new Scanner(System.in);
 		int numeroTabuada = sc.nextInt();

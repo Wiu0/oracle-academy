@@ -13,15 +13,26 @@ public class MediaNotaParametros {
 		nota3 = sc.nextDouble();
 		sc.close();
 		
-		calcularMediaNotas(nota1, nota2, nota3);
+		double mediaCalculada = calcularMediaNotas(nota1, nota2, nota3);
+		boolean aprovado = alunoEstaReprovado(mediaCalculada);
+		System.out.println(aprovado);
+		
 	}
-
 	
-	static void calcularMediaNotas(double nota1Aluno, double nota2Aluno, double nota3Aluno) {
+	
+	static boolean alunoEstaReprovado(double media) {
+		if(media < 7) {
+			return true;
+		}else {
+			return false;
+		}
+		
+//		return media < 7;
+	}
+		
+	static double calcularMediaNotas(double nota1Aluno, double nota2Aluno, double nota3Aluno) {
 		double media;
 		media = (nota1Aluno + nota2Aluno + nota3Aluno)/3;
-		System.out.println(media);
+		return media;
 	}
-
-	
 }

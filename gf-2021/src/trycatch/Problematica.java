@@ -8,7 +8,7 @@ public class Problematica {
 	public static void main(String[] args) {
 		System.out.println("Por favor digite um numero");
 		Scanner sc = new Scanner(System.in);
-				
+
 		while (true) {
 
 			try {
@@ -20,12 +20,12 @@ public class Problematica {
 
 			} catch (NullPointerException e) {
 				System.out.println("Vc fez merda 2");
-		
+
 			} finally {
 				sc.nextLine();
 				System.out.println("SEMPRE EXECUTA AQUI");
 			}
-		sc.close();
+			sc.close();
 		}
 	}
 }
