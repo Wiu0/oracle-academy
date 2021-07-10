@@ -1,5 +1,7 @@
 package desafio;
 
+import calculadora.Calculadora;
+
 public class DesafioSomatoriaIdadeVariaveis {
 
 	public static void main(String[] args) {
@@ -12,10 +14,13 @@ public class DesafioSomatoriaIdadeVariaveis {
 		idade1 = 30;
 		idade2 = 29;
 		idade3 = 7;
-
+		
 		byte idade6 = 45;
+		
+		Calculadora c = new Calculadora();
 		//idade6 = 45; NAO É NECESSARIO MAIS
-		int somatoria = idade1 + idade2 + idade3;
+		
+		double somatoria = c.somar(idade1, idade2);
 		//System.out.println(idade1 + idade2 + idade3);
 		System.out.println(somatoria);
 	}

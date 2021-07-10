@@ -10,6 +10,9 @@ public class DesafioMediaIdade {
 		int idadePai = sc.nextInt(), idadeMae = sc.nextInt(), idadeCrianca = sc.nextInt();
 		int quantidadeIdades = sc.nextInt();
 		sc.close();
+		
+		
+		
 		int somatoria = idadePai + idadeMae + idadeCrianca;
 		int mediaIdadeCasa = somatoria/quantidadeIdades;
 	
