@@ -130,6 +130,42 @@ public class AnalisandoTextos {
 		return flag;
 
 	}
-
 }
+
+
+/*
+ Mouse
+ 	Atributos
+ 	 - cor
+ 	 - led
+	Metodos
+	 - clicar
+	 - mover
+	 - rolar
+	 
+================
+ Livro
+	Atributos
+	 - nome
+	 - quantidadePaginas
+	 - autor
+	 - tema
+	 - desenhoCapa = "Dragao.png"   
+	Metodos 
+	 - folhear	
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

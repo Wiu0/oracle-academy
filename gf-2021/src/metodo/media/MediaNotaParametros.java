@@ -1,4 +1,4 @@
-package metodo;
+package metodo.media;
 
 import java.util.Scanner;
 

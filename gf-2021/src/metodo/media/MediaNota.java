@@ -1,15 +1,13 @@
-package metodo;
+package metodo.media;
 
 import java.util.Scanner;
 
 public class MediaNota {
 	
-	
 	public static void main(String[] args) {
 		perguntarNotasECalcularMediaNotas();
 	}
 
-	
 	static void perguntarNotasECalcularMediaNotas() {
 		double nota1, nota2, nota3;
 		double media;
@@ -28,3 +26,13 @@ public class MediaNota {
 	}
 	
 }
+
+/*
+MediaNota?
+	Atributos?
+	Metodos?
+	 
+================
+
+*/
+
