@@ -12,7 +12,6 @@ public class GerenciamentoCasa {
 		
 		System.out.println(despesa1.calcularValorTotalAPagar());
 	
-	
 		Despesa despesa2 = new Despesa();
 		despesa2.nome = "Compra cadeira";
 		despesa2.tipo = "Imprevistos";
