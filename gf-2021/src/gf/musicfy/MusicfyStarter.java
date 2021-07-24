@@ -1,5 +1,7 @@
 package gf.musicfy;
 
+import java.util.Scanner;
+
 public class MusicfyStarter {
 
 	public static void main(String[] args) {
@@ -15,6 +17,6 @@ public class MusicfyStarter {
 		minhaMusica.darNota((byte)4);
 		
 		System.out.println("O Nome da musica é: " + minhaMusica.nome);
-
+		
 	}
 }
