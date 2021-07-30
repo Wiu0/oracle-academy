@@ -11,7 +11,12 @@ public class TelaFuncionario {
 		funcionario.nome = "Ana";
 		funcionario.salario = 3000.01;
 		funcionario.bonus = 101.02;
-		funcionario.dataNascimento = Calendar.getInstance().getTime();
+		Calendar c = Calendar.getInstance();
+		c.set(Calendar.YEAR, 2000);
+		c.set(Calendar.DAY_OF_MONTH, 19);
+		c.set(Calendar.MONTH, 1);
+		
+		funcionario.dataNascimento = c.getTime();
 		funcionario.endereco = "RUA 1";
 		
 		Setor setorFuncionario = new Setor();
@@ -22,5 +27,7 @@ public class TelaFuncionario {
 		funcionario.setor = setorFuncionario;
 		
 		System.out.println(funcionario.nome + " vai receber " + funcionario.retornarGanhos() + " e ela é do setor de " + funcionario.setor.nome);
+		
+		System.out.println(funcionario.dataNascimento + " idade é " + funcionario.calcularIdade());
 	}
 }
