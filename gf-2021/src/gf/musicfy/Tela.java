@@ -4,15 +4,17 @@ import java.util.Scanner;
 
 public class Tela {
 
+	static Scanner sc = new Scanner(System.in);
+	static Musica music = new Musica();
+	
 	public static void main(String[] args) {
+		selecionarOpcao();
+		
+	}
 
-		Scanner sc = new Scanner(System.in);
+	static void selecionarOpcao() {
+
 		int opcao;
-		String nomeMusica = "";
-		String generoMusica = "";
-		double duracaoMusica = 0.0;
-		String artistaMusica = "";
-		byte pontuacaoMusica = 0;
 
 		System.out.println("Olá! Bem vindo ao sistema musicfy\n");
 
@@ -29,59 +31,89 @@ public class Tela {
 
 			opcao = sc.nextInt();
 			System.out.println("Voce escolheu a opcao: " + opcao);
-
 			switch (opcao) {
+			case 0:
+				System.out.println("Encerrando programa");
+				break;
 			case 1:
-				System.out.println("Cadastrar música. Entre com os dados da musica");
-				System.out.println("=================================\n");
-				System.out.println("Informe o nome da música");
-				sc.nextLine();
-				nomeMusica = sc.nextLine();
-				System.out.println("Informe o genero da música");
-				generoMusica = sc.nextLine();
-				System.out.println("Informe a duração da música");
-				duracaoMusica = sc.nextDouble();
-				System.out.println("Informe o artista da música");
-				sc.nextLine();
-				artistaMusica = sc.nextLine();
-				System.out.println("Informe a nota que você dá para a música");
-				pontuacaoMusica = sc.nextByte();
-
-				System.out.println("\nMusica cadastrada com sucesso: ");
-				System.out.println("Nome     : " + nomeMusica);
-				System.out.println("Genero   : " + generoMusica);
-				System.out.println("Duração  : " + duracaoMusica);
-				System.out.println("Artista  : " + artistaMusica);
-				System.out.println("Pontuação: " + pontuacaoMusica);
+				incluirMusica();
 				break;
-
 			case 2:
-				System.out.println("\nMusica : ");
-				System.out.println("Nome     : " + nomeMusica);
-				System.out.println("Genero   : " + generoMusica);
-				System.out.println("Duração  : " + duracaoMusica);
-				System.out.println("Artista  : " + artistaMusica);
-				System.out.println("Pontuação: " + pontuacaoMusica);
+				consultarMusica();
 				break;
-				
 			case 3:
-				System.out.println("\nAlterar Musica : ");
-
+				alterarMusica();
 				break;
 			case 4:
-				System.out.println("\nDeletar Musica : ");
-				nomeMusica = "";
-				generoMusica = "";
-				duracaoMusica = 0;
-				artistaMusica = "";
-				pontuacaoMusica = 0;
+				deletarMusica();
 				break;
 			default:
-				System.out.println("Opcao invalida. Opcao digitada foi " + opcao);
+				System.out.println("Opcao invalida " + opcao);
 				break;
 			}
 		} while (opcao != 0);
-
 		sc.close();
 	}
+
+	static void incluirMusica() {
+
+		System.out.println("Cadastrar música. Entre com os dados da musica");
+		System.out.println("=================================\n");
+		System.out.println("Informe o nome da música");
+		sc.nextLine();
+		music.nome = sc.nextLine();
+		System.out.println("Informe o genero da música");
+		music.genero = sc.nextLine();
+		System.out.println("Informe a duração da música");
+		music.duracao = sc.nextDouble();
+		System.out.println("Informe o artista da música");
+		sc.nextLine();
+		music.artista = sc.nextLine();
+		System.out.println("Informe a nota que você dá para a música");
+		music.pontuacao = sc.nextByte();
+
+		System.out.println("\nMusica cadastrada com sucesso: ");
+		System.out.println("Nome     : " + music.nome);
+		System.out.println("Genero   : " + music.genero);
+		System.out.println("Duração  : " + music.duracao);
+		System.out.println("Artista  : " + music.artista);
+		System.out.println("Pontuação: " + music.pontuacao);
+	}
+
+	static void consultarMusica() {
+		System.out.println("\nMusica   : ");
+		System.out.println("Nome     : " + music.nome);
+		System.out.println("Genero   : " + music.genero);
+		System.out.println("Duração  : " + music.duracao);
+		System.out.println("Artista  : " + music.artista);
+		System.out.println("Pontuação: " + music.pontuacao);
+	}
+
+	static void deletarMusica() {
+
+		music.nome = "";
+		music.genero = "";
+		music.duracao = 0;
+		music.artista = "";
+		music.pontuacao = 0;
+	}
+
+	static void alterarMusica() {
+		System.out.println("Digite o numero para escolher o que deseja alterar musica");
+		System.out.println("1. nome, 2. Genero, 3. Duração, 4. Artista, 5. Pontuacao");
+		int opcao = sc.nextInt();
+		if(opcao == 1) {
+			System.out.println("Digite o novo nome");
+			sc.nextLine();
+			music.nome = sc.nextLine();
+		} else if(opcao == 2) {
+			System.out.println("Digite o novo genero");
+			sc.nextLine();
+			music.genero = sc.nextLine();
+		} else if(opcao == 3) {
+			System.out.println("Digite o novo duração");
+			music.duracao = sc.nextDouble();
+		}
+	}
+	
 }
