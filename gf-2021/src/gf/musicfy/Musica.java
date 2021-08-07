@@ -10,7 +10,6 @@ public class Musica {
 	byte pontuacao;
 	
 	void tocar() {
-		System.out.println("deveria tocar a musica");
 	}
 	
 	void parar() {

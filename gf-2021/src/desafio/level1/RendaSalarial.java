@@ -8,7 +8,7 @@ public class RendaSalarial {
 //		
 //		d = calcularTotalDaRendaSalarial(250, 123);//JOption
 //		JOptionPane.showMessageDialog(null, d);
-		
+	
 		double totalRenda = RendaSalarial.calcularTotalDaRendaSalarial(1000, 2000);
 		double valorReserva = RendaSalarial.calcularReserva(totalRenda);
 		System.out.println(valorReserva);

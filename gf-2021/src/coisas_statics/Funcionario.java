@@ -2,9 +2,10 @@ package coisas_statics;
 
 public class Funcionario {
 
-	static String nome;
-	static double salario;
+	String nome;
+	double salario;
 	int idade;
+	static int idadeMinima = 18;
 	
 	static void calcular() {
 		

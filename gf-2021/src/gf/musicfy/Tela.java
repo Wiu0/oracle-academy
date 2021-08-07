@@ -2,18 +2,30 @@ package gf.musicfy;
 
 import java.util.Scanner;
 
+//Usuario
+//Playlist
+//Album
+//Artista
+//Plano
+//Menu???
+//Configuracoes
+//Funcionario
+//Favoritos?
+
 public class Tela {
 
 	static Scanner sc = new Scanner(System.in);
 	static Musica music = new Musica();
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		selecionarOpcao();
 		
 	}
 
 	static void selecionarOpcao() {
 
+		//Acabou o tempo. Você já terminou sua tarefa.		
+		
 		int opcao;
 
 		System.out.println("Olá! Bem vindo ao sistema musicfy\n");
@@ -27,6 +39,7 @@ public class Tela {
 			System.out.println("2 - Consultar música");
 			System.out.println("3 - Alterar música");
 			System.out.println("4 - Deletar música");
+			System.out.println("5 - Tocar música");
 			System.out.println("*********************************");
 
 			opcao = sc.nextInt();
