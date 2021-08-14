@@ -2,70 +2,48 @@ package gf.musicfy;
 
 import java.util.Scanner;
 
-//Usuario
-//Playlist
-//Album
-//Artista
-//Plano
-//Menu???
-//Configuracoes
-//Funcionario
-//Favoritos?
-
-public class Tela {
+public class TelaMusica {
 
 	static Scanner sc = new Scanner(System.in);
 	static Musica music = new Musica();
-	
-	public static void main(String[] args) throws InterruptedException {
-		selecionarOpcao();
-		
-	}
 
-	static void selecionarOpcao() {
-
-		//Acabou o tempo. Você já terminou sua tarefa.		
-		
+	static void opcoes() {
 		int opcao;
-
-		System.out.println("Olá! Bem vindo ao sistema musicfy\n");
-
 		do {
-			System.out.println("=================================");
-			System.out.println("Escolha uma opção abaixo:");
-			System.out.println("*********************************");
-			System.out.println("0 - Sair");
-			System.out.println("1 - Incluir música");
-			System.out.println("2 - Consultar música");
-			System.out.println("3 - Alterar música");
-			System.out.println("4 - Deletar música");
-			System.out.println("5 - Tocar música");
-			System.out.println("*********************************");
+			System.out.println("Opções para música. Entre com a opcao desejada");
+			System.out.println("=================================\n");
+			System.out.println("0 - Voltar");
+			System.out.println("1 - Incluir Musica");
+			System.out.println("2 - Alterar Musica");
+			System.out.println("3 - Consultar Musica");
+			System.out.println("4 - Deletar Musica");
 
 			opcao = sc.nextInt();
 			System.out.println("Voce escolheu a opcao: " + opcao);
 			switch (opcao) {
 			case 0:
-				System.out.println("Encerrando programa");
+				System.out.println("Voltar para menu anterior");
 				break;
 			case 1:
-				incluirMusica();
+				// O que tem q acontecer aqui. Incluir musica, Alterar Musica, Consultar,
+				// deletar
+				TelaMusica.incluirMusica();
 				break;
 			case 2:
-				consultarMusica();
+				TelaMusica.alterarMusica();
 				break;
 			case 3:
-				alterarMusica();
+				TelaMusica.consultarMusica();
 				break;
 			case 4:
-				deletarMusica();
+				// Incluir o Artista
+				TelaMusica.deletarMusica();
 				break;
 			default:
 				System.out.println("Opcao invalida " + opcao);
 				break;
 			}
 		} while (opcao != 0);
-		sc.close();
 	}
 
 	static void incluirMusica() {
@@ -115,18 +93,17 @@ public class Tela {
 		System.out.println("Digite o numero para escolher o que deseja alterar musica");
 		System.out.println("1. nome, 2. Genero, 3. Duração, 4. Artista, 5. Pontuacao");
 		int opcao = sc.nextInt();
-		if(opcao == 1) {
+		if (opcao == 1) {
 			System.out.println("Digite o novo nome");
 			sc.nextLine();
 			music.nome = sc.nextLine();
-		} else if(opcao == 2) {
+		} else if (opcao == 2) {
 			System.out.println("Digite o novo genero");
 			sc.nextLine();
 			music.genero = sc.nextLine();
-		} else if(opcao == 3) {
+		} else if (opcao == 3) {
 			System.out.println("Digite o novo duração");
 			music.duracao = sc.nextDouble();
 		}
 	}
-	
 }
