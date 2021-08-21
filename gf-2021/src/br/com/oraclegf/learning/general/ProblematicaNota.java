@@ -11,8 +11,8 @@ public class ProblematicaNota {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Quantas notas?");
-		int qtdNotas = sc.nextInt();
-		
+		int qtdNotas = sc.nextInt();        
+		           
 		double notas[] = new double[qtdNotas];
 		double somatoriaNotas = 0;
 		

@@ -1,4 +1,4 @@
-package gf.musicfy;
+package gf.musicfy.tela;
 
 import java.util.Scanner;
 

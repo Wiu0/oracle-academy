@@ -2,8 +2,8 @@ package gf.musicfy;
 
 public class Artista {
 	
-	String nome;
-	short idade;
-	String generoMusical;
-	Album album;
+	public String nome;
+	public short idade;
+	public String generoMusical;
+	public Album album;
 }

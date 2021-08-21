@@ -1,13 +1,17 @@
-package gf.musicfy;
+package gf.musicfy.tela;
 
 import java.util.Scanner;
 
+import gf.musicfy.Artista;
+
 public class TelaArtista {
+
 
 	static Artista artist = new Artista(); 
 	static Scanner sc = new Scanner(System.in);
 	
 	static void opcoes() {
+		
 		int opcao;
 		do {
 			System.out.println("Opções para Artista. Entre com a opcao desejada");
@@ -34,7 +38,7 @@ public class TelaArtista {
 		} while (opcao != 0);
 	}
 	
-	static void incluirArtista() {
+	protected static void incluirArtista() {
 
 		System.out.println("Cadastrar Artista. Entre com os dados do artista");
 		System.out.println("=================================\n");

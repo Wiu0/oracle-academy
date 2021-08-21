@@ -1,12 +1,15 @@
-package gf.musicfy;
+package gf.musicfy.tela;
 
 import java.util.Scanner;
 
+import gf.musicfy.Musica;
+
 public class TelaMusica {
 
-	static Scanner sc = new Scanner(System.in);
-	static Musica music = new Musica();
-
+	private static Scanner sc = new Scanner(System.in);
+	private static Musica music = new Musica();
+	private static Musica musics[] = new Musica[100];
+	
 	static void opcoes() {
 		int opcao;
 		do {
@@ -46,7 +49,7 @@ public class TelaMusica {
 		} while (opcao != 0);
 	}
 
-	static void incluirMusica() {
+	private static void incluirMusica() {
 
 		System.out.println("Cadastrar música. Entre com os dados da musica");
 		System.out.println("=================================\n");
@@ -69,9 +72,11 @@ public class TelaMusica {
 		System.out.println("Duração  : " + music.duracao);
 		System.out.println("Artista  : " + music.artista);
 		System.out.println("Pontuação: " + music.pontuacao);
+		
+		
 	}
 
-	static void consultarMusica() {
+	private static void consultarMusica() {
 		System.out.println("\nMusica   : ");
 		System.out.println("Nome     : " + music.nome);
 		System.out.println("Genero   : " + music.genero);
@@ -80,7 +85,7 @@ public class TelaMusica {
 		System.out.println("Pontuação: " + music.pontuacao);
 	}
 
-	static void deletarMusica() {
+	private static void deletarMusica() {
 
 		music.nome = "";
 		music.genero = "";
@@ -89,7 +94,7 @@ public class TelaMusica {
 		music.pontuacao = 0;
 	}
 
-	static void alterarMusica() {
+	private static void alterarMusica() {
 		System.out.println("Digite o numero para escolher o que deseja alterar musica");
 		System.out.println("1. nome, 2. Genero, 3. Duração, 4. Artista, 5. Pontuacao");
 		int opcao = sc.nextInt();
