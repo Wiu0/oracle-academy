@@ -21,7 +21,7 @@ public class TelaMusica {
 			System.out.println("3 - Consultar Musica");
 			System.out.println("4 - Deletar Musica");
 
-			opcao = sc.nextInt();
+			opcao = Integer.parseInt(sc.nextLine());
 			System.out.println("Voce escolheu a opcao: " + opcao);
 			switch (opcao) {
 			case 0:
@@ -54,17 +54,15 @@ public class TelaMusica {
 		System.out.println("Cadastrar música. Entre com os dados da musica");
 		System.out.println("=================================\n");
 		System.out.println("Informe o nome da música");
-		sc.nextLine();
 		music.nome = sc.nextLine();
 		System.out.println("Informe o genero da música");
 		music.genero = sc.nextLine();
 		System.out.println("Informe a duração da música");
-		music.duracao = sc.nextDouble();
+		music.duracao = Double.parseDouble(sc.nextLine());
 		System.out.println("Informe o artista da música");
-		sc.nextLine();
 		music.artista = sc.nextLine();
 		System.out.println("Informe a nota que você dá para a música");
-		music.pontuacao = sc.nextByte();
+		music.pontuacao = Byte.parseByte(sc.nextLine());
 
 		System.out.println("\nMusica cadastrada com sucesso: ");
 		System.out.println("Nome     : " + music.nome);
@@ -97,18 +95,16 @@ public class TelaMusica {
 	private static void alterarMusica() {
 		System.out.println("Digite o numero para escolher o que deseja alterar musica");
 		System.out.println("1. nome, 2. Genero, 3. Duração, 4. Artista, 5. Pontuacao");
-		int opcao = sc.nextInt();
+		int opcao = Integer.parseInt(sc.nextLine());
 		if (opcao == 1) {
 			System.out.println("Digite o novo nome");
-			sc.nextLine();
 			music.nome = sc.nextLine();
 		} else if (opcao == 2) {
 			System.out.println("Digite o novo genero");
-			sc.nextLine();
 			music.genero = sc.nextLine();
 		} else if (opcao == 3) {
 			System.out.println("Digite o novo duração");
-			music.duracao = sc.nextDouble();
+			music.duracao = Double.parseDouble(sc.nextLine());
 		}
 	}
 }

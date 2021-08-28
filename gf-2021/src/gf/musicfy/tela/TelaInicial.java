@@ -16,7 +16,6 @@ public class TelaInicial {
 
 	static Scanner sc = new Scanner(System.in);
 	
-	
 	public static void main(String[] args) throws InterruptedException {
 		selecionarOpcao();
 		
@@ -37,7 +36,7 @@ public class TelaInicial {
 			System.out.println("2 - Artista");
 			System.out.println("*********************************");
 
-			opcao = sc.nextInt();
+			opcao = Integer.parseInt(sc.nextLine());
 			System.out.println("Voce escolheu a opcao: " + opcao);
 			switch (opcao) {
 			case 0:

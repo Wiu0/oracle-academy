@@ -6,7 +6,6 @@ import gf.musicfy.Artista;
 
 public class TelaArtista {
 
-
 	static Artista artist = new Artista(); 
 	static Scanner sc = new Scanner(System.in);
 	
@@ -19,7 +18,7 @@ public class TelaArtista {
 			System.out.println("0 - Voltar");
 			System.out.println("1 - Incluir Artista");
 
-			opcao = sc.nextInt();
+			opcao = Integer.parseInt(sc.nextLine());
 			System.out.println("Voce escolheu a opcao: " + opcao);
 			switch (opcao) {
 			case 0:
@@ -43,12 +42,10 @@ public class TelaArtista {
 		System.out.println("Cadastrar Artista. Entre com os dados do artista");
 		System.out.println("=================================\n");
 		System.out.println("Informe o nome do artista");
-		sc.nextLine();
 		artist.nome = sc.nextLine();
 		System.out.println("Informe a idade do artista");
-		artist.idade = sc.nextShort();
+		artist.idade = Short.parseShort(sc.nextLine());
 		System.out.println("Informe o genero musical do artista");
-		sc.nextLine();
 		artist.generoMusical = sc.nextLine();
 	
 
