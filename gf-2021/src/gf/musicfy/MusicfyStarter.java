@@ -1,14 +1,11 @@
 package gf.musicfy;
 
-import java.util.Scanner;
-
 public class MusicfyStarter {
 
 	public static void main(String[] args) {
 
-		Musica minhaMusica = new Musica();
+		Musica minhaMusica = new Musica("céu azul");
 
-		minhaMusica.nome = "céu azul";
 		minhaMusica.artista = "CBJ";
 		minhaMusica.duracao = 3.20;
 

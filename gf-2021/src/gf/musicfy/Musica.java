@@ -9,6 +9,10 @@ public class Musica {
 	public String artista;
 	public byte pontuacao;
 	
+	public Musica(String nomeMusica) {
+		nome = nomeMusica;
+	}
+	
 	void tocar() {
 	}
 	

@@ -6,4 +6,8 @@ public class Artista {
 	public short idade;
 	public String generoMusical;
 	public Album album;
+	
+	public Artista (String nomeArtista) {
+		nome = nomeArtista;
+	}
 }
