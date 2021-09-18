@@ -22,8 +22,8 @@ public class ConexaoSQlite {
 	
 	
 	public void insert(String nome) {		  
-		try {		  
-			this.stm = this.conn.createStatement();
+		try {		
+			this.stm = conn.createStatement();
 		  
 			this.stm.executeUpdate("INSERT INTO parceiro VALUES ('"+ nome + "')");
 		}
