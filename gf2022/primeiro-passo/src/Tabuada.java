@@ -16,7 +16,18 @@ public class Tabuada {
 		for (int i = 0; i <= limiteLaco; i++) {
 			System.out.print(numero + " x " + i + " = ");
 			System.out.println(numero * i);
-
 		}
+		
+		
+		for(;;) {
+			
+			System.out.println("Aaiiiiiddd");
+			for(;;) {
+				System.out.println("fdfdsfds");
+			}
+			
+		}
+			
+		
 	}
 }
