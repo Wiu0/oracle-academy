@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class MethodArea {
 
 	static List<String> nome;
-	
+	int a;
 	static {
 		nome = new ArrayList<>();
 	}
