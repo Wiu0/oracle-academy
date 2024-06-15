@@ -1,4 +1,3 @@
-import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Filme {
@@ -29,7 +28,7 @@ public class Filme {
 		quantidadeCompartilhamento = sc.nextInt();
 		System.out.println("Informe quantidade visualização do filme:");
 		quantidadeVisualizacao = sc.nextLong();
-		System.out.println("Informe o custo do filme filme:");
+		System.out.println("Informe o custo do filme:");
 		valorCustoDoFilme = sc.nextFloat();
 		System.out.println("Informe o valor da bilheteria do filme:");
 		valorDaBilheteria = sc.nextDouble();
@@ -38,14 +37,27 @@ public class Filme {
 		seloQualidade = sc.nextLine().charAt(0);
 		System.out.println("Informe se ja está disponivel o filme:");
 		disponivel = sc.nextBoolean();
-		
+		System.out.println("Digite a quantidade de atores ou atrizes");
+		int quantidadeAt = sc.nextInt();
+		sc.nextLine();
+		nomeAtores = new String[quantidadeAt];
+		for(int i = 0; i < quantidadeAt; i++) {
+			nomeAtores[i] = sc.nextLine();
+		}
 		sc.close();
 		
 		System.out.println("Cadastrado com sucesso: ");
 		System.out.println("Nome: " + nome);
 		System.out.println("Disponível: " + disponivel);
 		System.out.println("Bilheteria: " + valorDaBilheteria);
-		
+		if(quantidadeAt > 0) {
+			System.out.println("Os atores e atrizes são:");
+			for(int i = 0; i < quantidadeAt; i++) {
+				System.out.println(nomeAtores[i]);
+			}
+		} else {
+			System.out.println("Nao ha atores ou atrizes cadastrados para esse filme");
+		}
 		
 	}
 }

@@ -41,8 +41,10 @@ public class ContadorPalavras {
 				.length);
 	 */
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 		
-		String frase = "Oi Tudo dsds dsads å bem?";
+		System.out.println("Digite uma frase");
+		String frase = sc.nextLine();
 		int quantidadeCaracteres = frase.length();
 		int quantidadePalavras = 1;
 		int quantidadeLetraA = 0;
@@ -55,6 +57,46 @@ public class ContadorPalavras {
 		
 		System.out.println(quantidadePalavras);		
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
 
 
