@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Move 3 elements to &apos;gf-aula-2006/src/br.com.oracle.gf.desafio&apos;&#x0A;- Original project: &apos;gf-aula-2006&apos;&#x0A;- Destination element: &apos;gf-aula-2006/src/br.com.oracle.gf.desafio&apos;&#x0A;- Original elements:&#x0A;     DesafioN1.java&#x0A;     DesafioN2.java&#x0A;     DesafioN3.java&#x0A;- Update references to refactored element" description="Move compilation units" destination="/src&lt;br.com.oracle.gf.desafio" element1="/src&lt;{DesafioN1.java" element2="/src&lt;{DesafioN2.java" element3="/src&lt;{DesafioN3.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1595980120088" units="3" version="1.0"/>
-</session>

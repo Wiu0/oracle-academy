@@ -1,3 +1,0 @@
-INDEX VERSION 1.131+/Volumes/WIU-HD-Data/git/gf/gf20192020/.metadata/.plugins/org.eclipse.jdt.core
-2994791622.index
-1277319819.index
