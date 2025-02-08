@@ -11,16 +11,38 @@ public class ListaNomeResolucao {
 		System.out.println("2 - Listar aluno");
 	}
 
-	public static String perguntarNome(Scanner sc) {
-		String name;
+	public static String responderQuestionario(Scanner sc) {
+		String name, endereco;
+		short quantidadePessoaCasa;
+		boolean temFilhos;
+		double rendaMensal;
+
 		System.out.println("Qual seu nome?");
 		sc.nextLine();
 		name = sc.nextLine();
+
+		System.out.println("Qual seu endereço");
+		endereco = sc.nextLine();
+		System.out.println("Quantidade de pessoas");
+		quantidadePessoaCasa = sc.nextShort();
+
+		System.out.println("Tem filhos. Digite sim ou nao");
+		String respostaTemFilho = sc.next();
+		if (respostaTemFilho.equals("sim")) {
+			temFilhos = true;
+		} else {
+			temFilhos = false;
+		}
+
+		System.out.println("Renda mensal");
+		rendaMensal = sc.nextDouble();
+		
+		System.out.println("Cadastro realizado com sucesso:");
 		return name;
 	}
 
-	public static void listarNomes(String nome) {
-		System.out.println("Alunos:");
+	public static void listarPessoa(String nome) {
+		System.out.println("Pessoa:");
 		System.out.println(nome);
 	}
 
@@ -38,10 +60,10 @@ public class ListaNomeResolucao {
 			sair();
 			break;
 		case 1:
-			n = perguntarNome(scanner);
+			n = responderQuestionario(scanner);
 			break;
 		case 2:
-			listarNomes(n);
+			listarPessoa(n);
 			break;
 		default:
 			mostrarOpcaoInvalida();
