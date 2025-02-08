@@ -7,11 +7,11 @@ public class ListaNome {
 		int opcao;
 		do {
 			System.out.println("===============================================================");
-			System.out.println("Sistema de Aluno GF");
+			System.out.println("Sistema de Pessoa GF");
 			System.out.println("===============================================================");
 			System.out.println("0 - Sair");
-			System.out.println("1 - Cadastrar aluno");
-			System.out.println("2 - Listar aluno");
+			System.out.println("1 - Cadastrar pessoa");
+			System.out.println("2 - Listar pessoa");
 			opcao = sc.nextInt();
 			switch(opcao){
 			case 0: 
@@ -23,7 +23,7 @@ public class ListaNome {
 				nome = sc.nextLine();
 				break;
 			case 2: 
-				System.out.println("Alunos:");
+				System.out.println("Pessoa:");
 				System.out.println(nome);
 				break;
 			default: 
