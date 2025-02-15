@@ -3,10 +3,7 @@ import java.util.Scanner;
 public class ListaNomeResolucao {
 
 	public static Scanner sc = new Scanner(System.in);
-	public static String endereco = "";
-	public static short quantidadePessoaCasa;
-	public static boolean temFilhos;
-	public static double rendaMensal;
+	public static Aluno estudante = new Aluno();
 	
 	public static void mostrarMenuInicial() {
 		System.out.println("===============================================================");
@@ -17,49 +14,48 @@ public class ListaNomeResolucao {
 		System.out.println("2 - Listar aluno");
 	}
 
-	public static String responderQuestionario() {
-		String name;
-
+	public static void responderQuestionario() {
+	
 		System.out.println("Qual seu nome?");
 		sc.nextLine();
-		name = sc.nextLine();
+		estudante.nome = sc.nextLine();
 
 		System.out.println("Qual seu endereço");
-		endereco = sc.nextLine();
+		estudante.endereco = sc.nextLine();
 		System.out.println("Quantidade de pessoas");
-		quantidadePessoaCasa = sc.nextShort();
-
+		estudante.quantidadePessoaNaCasa = sc.nextShort();
 		System.out.println("Tem filhos. Digite sim ou nao");
 		String respostaTemFilho = sc.next();
-		if (respostaTemFilho.equals("sim")) {
-			temFilhos = true;
+		System.out.println();
+		if (respostaTemFilho.equalsIgnoreCase("sim")) {
+			estudante.temFilhos = true;
 		} else {
-			temFilhos = false;
+			estudante.temFilhos = false;
 		}
 
 		System.out.println("Renda mensal");
-		rendaMensal = sc.nextDouble();
+		estudante.rendaMensal = sc.nextDouble();
 		
 		System.out.println("Cadastro realizado com sucesso:");
-		return name;
+	
 	}
 
-	public static void listarDadosPessoa(String nome) {
+	public static void listarDadosPessoa() {
 		
 		System.out.print("Nome: ");
-		System.out.println(nome);
+		System.out.println(estudante.nome);
 		System.out.print("Endereco: ");
-		System.out.println(endereco);
+		System.out.println(estudante.endereco);
 		System.out.print("Quantidade: ");
-		System.out.println(quantidadePessoaCasa);
+		System.out.println(estudante.quantidadePessoaNaCasa);
 		System.out.print("Tem filhos: ");
-		if(temFilhos) {
+		if(estudante.temFilhos) {
 			System.out.println("Sim");
 		} else {
 			System.out.println("Não");
 		}
 		System.out.print("Renda: ");
-		System.out.println(rendaMensal);
+		System.out.println(estudante.rendaMensal);
 	}
 
 	private static void mostrarOpcaoInvalida() {
@@ -70,30 +66,28 @@ public class ListaNomeResolucao {
 		System.out.println("Saindo");
 	}
 
-	public static String apresentarDetalheOpcaoEscolhida(int opcao, String n) {
+	public static void apresentarDetalheOpcaoEscolhida(int opcao) {
 		switch (opcao) {
 		case 0:
 			sair();
 			break;
 		case 1:
-			n = responderQuestionario();
+			responderQuestionario();
 			break;
 		case 2:
-			listarDadosPessoa(n);
+			listarDadosPessoa();
 			break;
 		default:
 			mostrarOpcaoInvalida();
 		}
-		return n; 
 	}
 
 	public static void main(String[] args) {
-		String nome = "";
 		int opcao;
 		do {
 			mostrarMenuInicial();
 			opcao = sc.nextInt();
-			nome = apresentarDetalheOpcaoEscolhida(opcao, nome);
+			apresentarDetalheOpcaoEscolhida(opcao);
 		} while (opcao != 0);
 		sc.close();
 	}
