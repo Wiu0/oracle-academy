@@ -17,4 +17,6 @@ comment7.params=
 comment7.target=void\ setIdleSpriteIdle()
 comment8.params=
 comment8.target=void\ setIdleSpriteSlide()
-numComments=9
+comment9.params=
+comment9.target=void\ setIdleSpriteReception()
+numComments=10

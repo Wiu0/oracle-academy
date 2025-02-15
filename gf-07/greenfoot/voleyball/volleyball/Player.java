@@ -12,6 +12,7 @@ public class Player extends Actor
     private byte countActualSpriteIdle = 0;
     private byte countActualSpriteRun = 0;
     private byte countActualSpriteSlide = 0;
+    private byte countActualSpriteReception = 0;
     private String key = null;
 
     public void act()
@@ -31,6 +32,8 @@ public class Player extends Actor
             setIdleSpriteRun("s");
         } else if(Greenfoot.isKeyDown("space")){
             setIdleSpriteSlide();
+        } else if(Greenfoot.isKeyDown("enter")){
+            setIdleSpriteReception();
         }  else {
             setIdleSpriteIdle();
         }
@@ -78,4 +81,14 @@ public class Player extends Actor
         }
         countActualSpriteSlide = setSprite("slide", countActualSpriteSlide, (byte)14);
     }
+    static boolean first = true;
+    private void setIdleSpriteReception() {
+        if(countActualSpriteReception == 10 && first) {
+             first = false;
+        }
+        if(!first) {
+            countActualSpriteReception = 5;
+        }
+        countActualSpriteReception = setSprite("reception", countActualSpriteReception, (byte)11);
+    }   
 }
