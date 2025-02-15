@@ -2,6 +2,12 @@ import java.util.Scanner;
 
 public class ListaNomeResolucao {
 
+	public static Scanner sc = new Scanner(System.in);
+	public static String endereco = "";
+	public static short quantidadePessoaCasa;
+	public static boolean temFilhos;
+	public static double rendaMensal;
+	
 	public static void mostrarMenuInicial() {
 		System.out.println("===============================================================");
 		System.out.println("Sistema de Aluno GF");
@@ -11,11 +17,8 @@ public class ListaNomeResolucao {
 		System.out.println("2 - Listar aluno");
 	}
 
-	public static String responderQuestionario(Scanner sc) {
-		String name, endereco;
-		short quantidadePessoaCasa;
-		boolean temFilhos;
-		double rendaMensal;
+	public static String responderQuestionario() {
+		String name;
 
 		System.out.println("Qual seu nome?");
 		sc.nextLine();
@@ -41,9 +44,22 @@ public class ListaNomeResolucao {
 		return name;
 	}
 
-	public static void listarPessoa(String nome) {
-		System.out.println("Pessoa:");
+	public static void listarDadosPessoa(String nome) {
+		
+		System.out.print("Nome: ");
 		System.out.println(nome);
+		System.out.print("Endereco: ");
+		System.out.println(endereco);
+		System.out.print("Quantidade: ");
+		System.out.println(quantidadePessoaCasa);
+		System.out.print("Tem filhos: ");
+		if(temFilhos) {
+			System.out.println("Sim");
+		} else {
+			System.out.println("Não");
+		}
+		System.out.print("Renda: ");
+		System.out.println(rendaMensal);
 	}
 
 	private static void mostrarOpcaoInvalida() {
@@ -54,31 +70,30 @@ public class ListaNomeResolucao {
 		System.out.println("Saindo");
 	}
 
-	public static String apresentarDetalheOpcaoEscolhida(int opcao, Scanner scanner, String n) {
+	public static String apresentarDetalheOpcaoEscolhida(int opcao, String n) {
 		switch (opcao) {
 		case 0:
 			sair();
 			break;
 		case 1:
-			n = responderQuestionario(scanner);
+			n = responderQuestionario();
 			break;
 		case 2:
-			listarPessoa(n);
+			listarDadosPessoa(n);
 			break;
 		default:
 			mostrarOpcaoInvalida();
 		}
-		return n;
+		return n; 
 	}
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
 		String nome = "";
 		int opcao;
 		do {
 			mostrarMenuInicial();
 			opcao = sc.nextInt();
-			nome = apresentarDetalheOpcaoEscolhida(opcao, sc, nome);
+			nome = apresentarDetalheOpcaoEscolhida(opcao, nome);
 		} while (opcao != 0);
 		sc.close();
 	}
