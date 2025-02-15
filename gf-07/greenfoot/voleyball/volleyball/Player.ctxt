@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=Player
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Player\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ refreshSprite()
+comment3.params=action\ count
+comment3.target=byte\ setSprite(java.lang.String,\ byte)
+comment4.params=action\ count\ limit
+comment4.target=byte\ setSprite(java.lang.String,\ byte,\ byte)
+comment5.params=key
+comment5.target=void\ setIdleSpriteRun(java.lang.String)
+comment6.params=key
+comment6.target=void\ moveDirection(java.lang.String)
+comment7.params=
+comment7.target=void\ setIdleSpriteIdle()
+comment8.params=
+comment8.target=void\ setIdleSpriteSlide()
+numComments=9
