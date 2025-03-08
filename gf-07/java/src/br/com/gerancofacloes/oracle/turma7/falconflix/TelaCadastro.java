@@ -39,10 +39,9 @@ public class TelaCadastro {
 		System.out.println("CEP:");
 	}
 	
-	private String pedirNome() {
+	private void pedirNome() {
 		System.out.println("Nome:");
 		nome = sc.nextLine();
-		return nome;
 	}
 	
 	private void pedirCPF() {
