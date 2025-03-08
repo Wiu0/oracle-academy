@@ -18,6 +18,7 @@ public class TelaInicial {
 		case 1: 
 			TelaRegistroConta tRegistroConta = new TelaRegistroConta();
 			tRegistroConta.cadastrar();
+			
 			break;
 		case 2: 
 			System.out.println("Tela de Login");
