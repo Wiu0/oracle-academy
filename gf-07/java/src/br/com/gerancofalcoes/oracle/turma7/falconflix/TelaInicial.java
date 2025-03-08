@@ -1,4 +1,4 @@
-package br.com.gerancofacloes.oracle.turma7.falconflix;
+package br.com.gerancofalcoes.oracle.turma7.falconflix;
 
 import java.util.Scanner;
 
