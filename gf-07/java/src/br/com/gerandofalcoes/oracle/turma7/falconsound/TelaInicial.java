@@ -25,6 +25,8 @@ public class TelaInicial {
 				break;
 			case 2:
 				System.out.println("Tela de Login");
+				TelaLogin tl = new TelaLogin();
+				tl.logar();
 				break;
 			default:
 				System.out.println("Unexpected value: " + opcao);

@@ -5,7 +5,11 @@ import java.util.Scanner;
 public class TelaRegistroConta {
 
 	private Scanner sc = new Scanner(System.in);
-	private Usuario user = new Usuario();
+	private static Usuario user = new Usuario();
+	
+	public static Usuario getUser() {
+		return user;
+	}
 	
 	private void pedirNome() {
 		System.out.println("Nome:");
