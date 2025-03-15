@@ -5,11 +5,8 @@ import java.util.Scanner;
 public class TelaRegistroConta {
 
 	private Scanner sc = new Scanner(System.in);
-	private static Usuario user = new Usuario();
-	
-	public static Usuario getUser() {
-		return user;
-	}
+	private Usuario user = new Usuario();
+	private UsuarioService usuarioService = new UsuarioService();
 	
 	private void pedirNome() {
 		System.out.println("Nome:");
@@ -52,5 +49,10 @@ public class TelaRegistroConta {
 		System.out.println("Telefone: " + user.getNumeroTelefone());
 		System.out.println("E-mail: " + user.getEmail());
 		System.out.println("Senha: " + user.getSenha());
+		System.out.println("Digite 1 para sim e 0 para nao");
+		String opcao = sc.nextLine();
+		if(opcao.equals("1")) {
+			usuarioService.salvar(user);
+		}
 	}
 }
