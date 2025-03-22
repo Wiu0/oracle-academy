@@ -7,7 +7,7 @@ public class Agenda {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int opcao;
-		String numeroTelefone[] = new String[10];
+		String numeroTelefone[] = new String[1];
 		int posicaoCadastrado = 0;
 		do {
 			System.out.println("1. Cadastrar numero de telefone");
@@ -17,6 +17,13 @@ public class Agenda {
 			case 1:
 				System.out.println("Digite seu numero de telefone a ser cadastrado");
 				sc.nextLine();
+				if(posicaoCadastrado == numeroTelefone.length) {
+					String[] novoNumeroTelefone = new String[numeroTelefone.length + 1];
+					for(int i = 0; i < numeroTelefone.length; i++) {
+						novoNumeroTelefone[i] = numeroTelefone[i];
+					}
+					numeroTelefone = novoNumeroTelefone;
+				}
 				numeroTelefone[posicaoCadastrado++] = sc.nextLine();
 				break;
 			case 2:
@@ -25,7 +32,7 @@ public class Agenda {
 				String phoneNumber = sc.nextLine();
 				boolean numeroEncontrado = false;
 
-				for (int i = 0; i < 10; i++) {
+				for (int i = 0; i < numeroTelefone.length; i++) {
 					if (phoneNumber.equals(numeroTelefone[i])) {
 						numeroEncontrado = true;
 						break;
