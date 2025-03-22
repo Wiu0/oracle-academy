@@ -1,13 +1,17 @@
 package br.com.gerandofalcoes.oracle.turma7.lista;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
-public class Agenda {
+public class ListAgenda {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int opcao;
-		String numeroTelefone[] = new String[3];
+		
+		List<String> numeroTelefone = new ArrayList<String>();
+		
 		int posicaoCadastrado = 0;
 		do {
 			System.out.println("1. Cadastrar numero de telefone");
@@ -17,14 +21,7 @@ public class Agenda {
 			case 1:
 				System.out.println("Digite seu numero de telefone a ser cadastrado");
 				sc.nextLine();
-				if(posicaoCadastrado == numeroTelefone.length) {
-					String[] novoNumeroTelefone = new String[numeroTelefone.length + 10];
-					for(int i = 0; i < numeroTelefone.length; i++) {
-						novoNumeroTelefone[i] = numeroTelefone[i];
-					}
-					numeroTelefone = novoNumeroTelefone;
-				}
-				numeroTelefone[posicaoCadastrado++] = sc.nextLine();
+				numeroTelefone.add(sc.nextLine()) ;
 				break;
 			case 2:
 				System.out.println("Digite seu numero de telefone a ser consultado");
@@ -32,8 +29,8 @@ public class Agenda {
 				String phoneNumber = sc.nextLine();
 				boolean numeroEncontrado = false;
 
-				for (int i = 0; i < numeroTelefone.length; i++) {
-					if (phoneNumber.equals(numeroTelefone[i])) {
+				for (int i = 0; i < numeroTelefone.size(); i++) {
+					if (phoneNumber.equals(numeroTelefone.get(i))) {
 						numeroEncontrado = true;
 						break;
 					}
